@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Snake</title>
+  <!-- Load the appearance rules from the separate CSS file. -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Snake</h1>
+
+  <!-- A 400 by 400 board: twenty rows and twenty columns of 20px cells. -->
+  <canvas id="paper" width="400" height="400" aria-label="Snake game board">
+    Your browser needs canvas support to display this game.
+  </canvas>
+
+  <!-- JavaScript shows this button when the game ends. -->
+  <button id="restartBtn" type="button" onclick="startGame()">Start Over</button>
+
+  <!-- Load after the elements above so JavaScript can find them. -->
+  <script src="script.js"></script>
+</body>
+</html>
