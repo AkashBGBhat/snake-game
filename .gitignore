@@ -1,19 +1,5 @@
-# Operating system files
-.DS_Store
-Thumbs.db
-
-# Local editor settings
+# Editor and OS files
 .vscode/
 .idea/
-*.swp
-*~
-
-# Optional development tooling output
-node_modules/
-coverage/
-*.log
-
-# Local secrets should never be committed
-.env
-.env.*
-!.env.example
+.DS_Store
+Thumbs.db
