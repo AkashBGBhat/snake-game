@@ -1,21 +1,21 @@
 # Snake Game
 
-A small browser Snake game built with HTML, CSS, and vanilla JavaScript. This learning project connects familiar C concepts (loops, arrays, structs, conditions, and functions) to canvas drawing and browser events.
+A browser Snake game built with HTML, CSS, and vanilla JavaScript. This learning project connects familiar C concepts (loops, arrays, structs, conditions, and functions) to canvas drawing and browser events.
 
-The snake is light green, the food is red, and each meal earns **10 points**. No frameworks, build step, or runtime dependencies are required.
+The snake is light green, food is red, and each meal earns **10 points**. No frameworks, build step, or runtime dependencies are required.
 
 ## Run locally
 
-Download this repository using **Code → Download ZIP**, extract it, and open `index.html` in a desktop browser. Keep `index.html`, `style.css`, and `script.js` in the same folder. The game starts immediately.
+Download this repository using **Code → Download ZIP**, extract it, and open `index.html` in a desktop browser. Keep the HTML, CSS, and JavaScript files in the same folder. The game starts immediately.
 
-Alternatively, clone the repository:
+Alternatively:
 
 ```sh
 git clone https://github.com/AkashBGBhat/snake-game.git
 cd snake-game
 ```
 
-Then open `index.html`. VS Code Live Server is optional, not required. Node.js is only needed for automated checks, not for playing.
+Then open `index.html`. VS Code Live Server is optional. Node.js is only needed for tests, not for playing.
 
 ## Controls
 
@@ -49,8 +49,7 @@ A direct reversal is blocked. Hitting a wall or the body ends the round.
 | `index.html` | Page structure, canvas, restart button, asset references |
 | `style.css` | Page colors, border, and button styling |
 | `script.js` | Commented state, drawing, input, and game loop |
-| `tests/snake.test.cjs` | Dependency-free Node tests with a simulated canvas and timers |
-| `.github/workflows/checks.yml` | GitHub Actions syntax checks and tests |
+| `tests/snake.test.cjs` | Dependency-free Node tests with simulated canvas and timers |
 | `.gitignore` | Common local development files to exclude |
 
 ## How it works
@@ -71,15 +70,17 @@ node --check tests/snake.test.cjs
 node --test tests/snake.test.cjs
 ```
 
-GitHub Actions runs the same commands on pushes to `main` or `feature/snake-game`, and pull requests targeting `main`. No npm installation is needed. These are JavaScript syntax checks and unit/characterization tests, not a browser end-to-end suite or a separate linter/type-checker.
+These are JavaScript syntax checks and characterization tests, not a browser end-to-end suite or a separate linter/type-checker. No npm installation is needed.
+
+**Verification status:** tests have been added but have not been executed by the publishing assistant. Uploading the planned GitHub Actions workflow failed, so automated CI is not configured in this branch. Do not interpret the absence of failed checks as a passing test run.
 
 The tests cover movement, growth, scoring, food rejection, four walls, body collision, vacated-tail movement, direct reversal, restart, and canvas drawing order. Two future improvements are explicitly marked TODO rather than reported as implemented.
 
-The tutorial version was manually checked during development. Automated canvas mocks verify drawing calls, not the visual appearance of the actual page.
+The tutorial version was manually checked during development. Canvas mocks verify drawing calls, not visual appearance in a real browser.
 
 ## Known limitations and future improvements
 
-This first version deliberately preserves the tutorial gameplay rather than silently redesigning it.
+This first version preserves the tutorial gameplay rather than silently redesigning it.
 
 | Limitation | Possible follow-up |
 | --- | --- |
@@ -88,8 +89,9 @@ This first version deliberately preserves the tutorial gameplay rather than sile
 | Arrow keys may also scroll a scrollable page | Prevent default behavior for handled game keys |
 | Fixed-size canvas and keyboard-only controls | Responsive layout and touch controls |
 | Score text can overlap gameplay near the top left | Move score into a separate page element |
+| Automated workflow upload did not complete | Add GitHub Actions and execute the checks before treating the release as verified |
 
-A screenshot is not included yet. There is no hosted-play URL in this README; publishing the repository does not itself enable GitHub Pages.
+A screenshot is not included yet. There is no hosted-play URL; publishing the repository does not itself enable GitHub Pages.
 
 ## Learning notes
 
