@@ -1,0 +1,22 @@
+/* All page styling lives here; canvas drawing colors live in script.js. */
+body {
+  background: black;
+}
+
+h1 {
+  color: green;
+}
+
+canvas {
+  border: 2px solid green;
+  background: darkgreen;
+}
+
+button {
+  display: none; /* Hidden until JavaScript shows it after game over. */
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: 20px;
+  background: green;
+  color: black;
+}
